@@ -50,7 +50,6 @@ class Program
         Console.WriteLine("Номер счета: " + a.GetNum());
         Console.WriteLine("Баланс: " + a.GetMoney());
         Console.WriteLine("Тип счета: " + a.GetTypeAccount());
-        Console.WriteLine();
         Console.WriteLine("Номер счета: " + b.GetNum());
         Console.WriteLine("Баланс: " + b.GetMoney());
         Console.WriteLine("Тип счета: " + b.GetTypeAccount());
