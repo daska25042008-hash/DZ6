@@ -47,12 +47,13 @@ class Program
         a.Fill(50000000, AccountType.Savings);
         b.Fill(108008694, AccountType.Current);
 
-        Console.WriteLine("Number: " + a.GetNum());
-        Console.WriteLine("Money: " + a.GetMoney());
-        Console.WriteLine("Type: " + a.GetTypeAccount());
-        Console.WriteLine("Number: " + b.GetNum());
-        Console.WriteLine("Money: " + b.GetMoney());
-        Console.WriteLine("Type: " + b.GetTypeAccount());
+        Console.WriteLine("Номер счета: " + a.GetNum());
+        Console.WriteLine("Баланс: " + a.GetMoney());
+        Console.WriteLine("Тип счета: " + a.GetTypeAccount());
+        Console.WriteLine();
+        Console.WriteLine("Номер счета: " + b.GetNum());
+        Console.WriteLine("Баланс: " + b.GetMoney());
+        Console.WriteLine("Тип счета: " + b.GetTypeAccount());
     }
 }
 
