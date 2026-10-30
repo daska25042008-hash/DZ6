@@ -24,6 +24,22 @@ class Account
         money = m;
         type = t;
     }
+    public void Put(double sum)
+    {
+        money = money + sum;
+    }
+    public bool Take(double sum)
+    {
+        if (sum > 0 && money >= sum)
+        {
+            money = money - sum;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
     public int GetNum()
     {
         return num;
@@ -42,17 +58,13 @@ class Program
     static void Main()
     {
         Account a = new Account();
-        Account b = new Account();
-
-        a.Fill(50000000, AccountType.Savings);
-        b.Fill(108008694, AccountType.Current);
-
-        Console.WriteLine("Number: " + a.GetNum());
-        Console.WriteLine("Money: " + a.GetMoney());
-        Console.WriteLine("Type: " + a.GetTypeAccount());
-        Console.WriteLine("Number: " + b.GetNum());
-        Console.WriteLine("Money: " + b.GetMoney());
-        Console.WriteLine("Type: " + b.GetTypeAccount());
+        a.Fill(5000, AccountType.Savings);
+        a.Put(1000);
+        bool result = a.Take(2000);
+        Console.WriteLine("Номер счета: " + a.GetNum());
+        Console.WriteLine("Баланс: " + a.GetMoney());
+        Console.WriteLine("Тип счета: " + a.GetTypeAccount());
+        Console.WriteLine("Операция успешна: " + result);
     }
 }
 
